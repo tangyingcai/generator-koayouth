@@ -1,0 +1,274 @@
+
+@import 'test.css';
+
+$minor-second   : 1.067;
+$major-second   : 1.125;
+$minor-third    : 1.2;
+$major-third    : 1.25;
+$perfect-fourth : 1.333;
+$aug-fourth     : 1.414;
+$perfect-fifth  : 1.5;
+$minor-sixth    : 1.6;
+$golden         : 1.618;
+$major-sixth    : 1.667;
+$minor-seventh  : 1.778;
+$major-seventh  : 1.875;
+$octave         : 2;
+$major-tenth    : 2.5;
+$major-eleventh : 2.667;
+
+$calibri       : 'Calibri', 'Candara', 'Segoe', 'Segoe UI', 'Optima', 'Arial', 'sans-serif';
+$candara       : 'Candara', 'Calibri', 'Segoe', 'Segoe UI', 'Optima', 'Arial', 'sans-serif';
+$courier       : 'Courier New', 'Courier', 'Lucida Sans Typewriter', 'Lucida Typewriter', 'monospace';
+$franklin      : 'Franklin Gothic Medium', 'Arial', 'sans-serif';
+$futura        : 'Futura', 'Trebuchet MS', 'Arial', 'sans-serif';
+$geneva        : 'Geneva', 'Tahoma', 'Verdana', 'sans-serif';
+$gill-sans     : 'Gill Sans', 'Gill Sans MT', 'Calibri', 'sans-serif';
+$helvetica     : 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+$lucida-grande : 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'Geneva', 'Verdana', 'sans-serif';
+$optima        : 'Optima', 'Segoe', 'Segoe UI', 'Candara', 'Calibri', 'Arial', 'sans-serif';
+$segoe         : 'Segoe', 'Segoe UI', 'Helvetica Neue', 'Arial', 'sans-serif';
+$tahoma        : 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
+$trebuchet     : 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'Tahoma', 'sans-serif';
+$verdana       : 'Verdana', 'Geneva', 'sans-serif';
+
+
+$antiqua       : 'Book Antiqua', 'Palatino', 'Palatino Linotype', 'Palatino LT STD', 'Georgia', 'serif';
+$baskerville   : 'Baskerville', 'Baskerville old face', 'Hoefler Text', 'Garamond', 'Times New Roman', 'serif';
+$bodoni        : 'Bodoni MT', 'Didot', 'Didot LT STD', 'Hoefler Text', 'Garamond', 'Times New Roman', 'serif';
+$cambria       : 'Cambria', 'Georgia', 'serif';
+$caslon        : 'Big Caslon', 'Book Antiqua', 'Palatino Linotype', 'Georgia', 'serif';
+$constantia    : 'Constantia', 'Palatino', 'Palatino Linotype', 'Palatino LT STD', 'Georgia', 'serif';
+$didot         : 'Didot', 'Didot LT STD', 'Hoefler Text', 'Garamond', 'Times New Roman', 'serif';
+$garamond      : 'Garamond', 'Baskerville', 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', 'serif';
+$goudy         : 'Goudy Old Style', 'Garamond', 'Big Caslon', 'Times New Roman', 'serif';
+$hoefler       : 'Hoefler Text', 'Baskerville old face', 'Garamond', 'Times New Roman', 'serif';
+$lucida-bright : 'Lucida Bright', 'Georgia', 'serif';
+$palatino      : 'Palatino', 'Palatino Linotype', 'Palatino LT STD', "Book Antiqua", 'Georgia', 'serif';
+
+
+$line-height-ratio  : 1.75 !default;
+$header-ratio       : $golden !default;
+$body-font          : $helvetica !default;
+$body-font-weight   : 300 !default;
+$body-color         : #666 !default;
+$header-font        : $helvetica !default;
+$header-font-weight : 500 !default;
+$header-color       : #111 !default;
+$min-font           : 12px !default;
+$max-font           : 20px !default;
+$min-width          : 600px !default;
+$max-width          : 1140px !default;
+$vertical-rhythm    : true !default;
+
+body {
+  font: $min-font;
+  font-size: 232px;
+}
+
+.divider {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  margin: 0rem;
+  padding: 0em;
+  width: auto;
+  height: 50%;
+  line-height: 0em;
+  text-align: center;
+}
+
+:fullscreen a {
+  display: flex
+}
+
+.foo::before {
+  content: "foo on small";
+}
+
+@media screen and (min-width: 769px) {
+  .foo::before {
+    content: "foo on medium";
+  }
+}
+
+.bar::before {
+  content: "bar on small";
+}
+
+@media screen and (min-width: 769px) {
+  .bar::before {
+    content: "bar on medium";
+  }
+}
+
+@keyframes animationExample {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.animateThis {
+  animation: animationExample 2s;
+  display: flex;
+}
+
+.thisWillChange {
+  will-change: transform;
+}
+
+.rgbaFallback {
+  background: #000000;
+  background: rgba(0,0,0,0.5);
+}
+
+.opacityFallback {
+  opacity: 0.5;
+}
+
+@component-namespace mine {
+
+  @component SearchForm {
+    padding: 0;
+    margin: 0;
+
+    @modifier advanced {
+      padding: 1rem;
+    }
+
+    @descendent textField {
+      border: 1px solid #ccc;
+
+      @when invalid {
+        border: 1px solid red;
+      }
+    }
+  }
+
+}
+
+@utility clearFix {
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+  /* If supporting IE 6/7 */
+  *zoom: 1;
+}
+
+/* lost test */
+
+.basic-column {
+  lost-center: 980px;
+  > div {
+    lost-column: 1/3;
+  }
+}
+
+.row {
+  lost-utility: clearfix;
+}
+
+.quarter {
+  lost-column: 1/4 0;
+}
+
+.quarter-half {
+  lost-column: 1/8 0;
+}
+
+.half {
+  lost-column: 1/2 0;
+}
+
+.nesting div{
+  lost-column: 1/2;
+}
+
+.offset-ele {
+  div {
+    lost-column: 1/3;
+  }
+
+  div:first-child {
+    lost-offset: 1/3;
+  }
+}
+
+.alignment {
+  lost-align: center;
+  width: 600px;
+  height: 400px;
+
+  div {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.edit-mode {
+  section:nth-of-type(1) {
+    lost-utility: edit;
+  }
+
+  section:nth-of-type(2) {
+    lost-utility: edit;
+  }
+}
+
+.vertical-grids {
+  section {
+    height: 100%;
+  }
+
+  div {
+    lost-row: 1/3;
+  }
+}
+
+.waffle-grids {
+  section {
+    height: 100%;
+  }
+
+  div {
+    lost-waffle: 1/3;
+  }
+}
+
+.flexbox-grids {
+  @lost flexbox flex;
+
+  section {
+    lost-center: 980px;
+    > div {
+      lost-column: 1/3;
+    }
+  }
+
+  .waffle {
+
+    lost-center: 980px no-flex;
+
+    div {
+      lost-waffle: 1/3 no-flex;
+    }
+  }
+}
+
+.masonry {
+  section {
+    lost-masonry-wrap: no-flex;
+  }
+
+  div {
+    lost-masonry-column: 1/3;
+  }
+}
