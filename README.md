@@ -6,25 +6,25 @@ A koaYouth generator for Yeoman.
 参照 [generator-koa](http://koajs.com) 实现的 koaYouth 脚手架.
 > A [koaYouth](https://github.com/SineLabo/youth.git) generator for [Yeoman](http://yeoman.io).
 
-
-├── lib
-│   └── render.js
-├── controllers
-│   └── messages.js
-├── public
-|   ├── js
-|   └── css
-|       └── style.css
-├── src
-|   └── js
-|   └── css
-|       └── style.css
-├── views
-|   ├── layout.html
-|   └── list.html
-├── app.js
-├── gulpfile.js
-└── package.json
+    .
+    ├── lib
+    │   └── render.js
+    ├── controllers
+    │   └── messages.js
+    ├── public
+    |   ├── js
+    |   └── css
+    |       └── style.css
+    ├── src
+    |   └── js
+    |   └── css
+    |       └── style.css
+    ├── views
+    |   ├── layout.html
+    |   └── list.html
+    ├── app.js
+    ├── gulpfile.js
+    └── package.json
 
 
 
