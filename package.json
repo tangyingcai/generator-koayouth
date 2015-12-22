@@ -1,13 +1,13 @@
 {
   "name": "generator-koayouth",
-  "version": "0.1.1",
-  "description": "A koaYouth generator for Yeoman",
+  "version": "0.1.4",
+  "description": "A koayouth generator for Yeoman",
   "keywords": [
     "yeoman-generator",
-    "koaYouth"
+    "koayouth"
   ],
-  "homepage": "https://github.com/tangyingcai/generator-koaYouth",
-  "bugs": "https://github.com/tangyingcai/generator-koaYouth/issues",
+  "homepage": "https://github.com/tangyingcai/generator-koayouth",
+  "bugs": "https://github.com/tangyingcai/generator-koayouth/issues",
   "author": {
     "name": "Peter Vilja",
     "email": "",
@@ -16,7 +16,7 @@
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/tangyingcai/generator-koaYouth.git"
+    "url": "git://github.com/tangyingcai/generator-koayouth.git"
   },
   "scripts": {
     "test": "mocha"
