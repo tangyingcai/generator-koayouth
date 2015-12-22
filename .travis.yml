@@ -3,4 +3,4 @@ node_js:
   - '0.10'
 before_install:
   - currentfolder=${PWD##*/}
-  - if [ "$currentfolder" != 'generator-koaYouth' ]; then cd .. && eval "mv $currentfolder generator-koaYouth" && cd generator-koaYouth; fi
+  - if [ "$currentfolder" != 'generator-koayouth' ]; then cd .. && eval "mv $currentfolder generator-koayouth" && cd generator-koayouth; fi

@@ -28,13 +28,16 @@ KoaYouthGenerator.prototype.askFor = function askFor() {
 KoaYouthGenerator.prototype.app = function app() {
 
   this.mkdir('app/controllers');
-  this.mkdir('app/routes');
-  this.mkdir('app/views');
+  // this.mkdir('app/routes');
   this.mkdir('app/lib');
-  this.mkdir('public/css');
+  this.mkdir('app/views');
+
   this.mkdir('public/js');
-  this.mkdir('src/css');
+  this.mkdir('public/css');
+
   this.mkdir('src/js');
+  this.mkdir('src/css');
+
 
   this.copy('messages.js', 'app/controllers/messages.js');
   this.copy('layout.html', 'app/views/layout.html');
@@ -48,6 +51,7 @@ KoaYouthGenerator.prototype.app = function app() {
   this.copy('gulpfile.js', 'gulpfile.js');
   this.copy('_package.json', 'package.json');
   this.copy('_gitignore', '.gitignore');
+  this.copy('.stylelintrc', '.stylelintrc');
   this.copy('README.md', 'README.md');
 };
 

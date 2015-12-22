@@ -1,8 +1,6 @@
 ## generator-koayouth
 基于koa , PostCSS 框架的mvn脚手架.
 
-A koaYouth generator for Yeoman.
-
 参照 [generator-koa](https://github.com/peter-vilja/generator-koa)
 实现的 koaYouth 脚手架.
 > A [koaYouth](https://github.com/SineLabo/youth.git) generator for [Yeoman](http://yeoman.io).
@@ -28,6 +26,7 @@ A koaYouth generator for Yeoman.
     ├── app.js
     ├── gulpfile.js
     └── package.json
+    └── .stylelintrc
 
 
 

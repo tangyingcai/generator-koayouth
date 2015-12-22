@@ -55,7 +55,7 @@ gulp.task('css', function () {
     pixrem,
 
     mqpacker,
-    // cssnano,
+    // cssnano, //css 压缩
     reporter({ clearMessages: true })
   ];
   return gulp.src('./src/css/style.css')
@@ -121,7 +121,7 @@ gulp.task('bs-reload', function () {
   browserSync.reload();
 });
 
-gulp.task('default', ['browser-sync'], function () {
+gulp.task('default', ['browser-sync','css','js'], function () {
   gulp.watch('./src/js/*.js', ['js']).on('change', browserSync.reload);
   gulp.watch("./src/css/*.css", ['css']).on('change', browserSync.reload);
   gulp.watch('./views/*.html', ['bs-reload']);

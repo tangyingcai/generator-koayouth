@@ -1,6 +1,6 @@
 {
   "name": "generator-koayouth",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "description": "A koayouth generator for Yeoman",
   "keywords": [
     "yeoman-generator",
